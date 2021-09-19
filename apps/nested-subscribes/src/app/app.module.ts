@@ -8,6 +8,7 @@ import { NestedSubscribeComponent } from './components/nested-subscribe/nested-s
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { SwitchMapObservablesComponent } from './components/switch-map-observables/switch-map-observables.component';
 import { MaterialModule } from './material.module';
+import { OneObservableComponent } from './components/one-observable/one-observable.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MaterialModule } from './material.module';
     PokemonListComponent,
     NestedSubscribeComponent,
     SwitchMapObservablesComponent,
+    OneObservableComponent,
   ],
   imports: [
     BrowserModule,
