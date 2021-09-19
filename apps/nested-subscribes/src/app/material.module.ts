@@ -9,7 +9,7 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { MatTableModule } from '@angular/material/table';
     DragDropModule,
     // Material
     MatTableModule,
-    MatCardModule,
+    MatButtonModule,
   ],
 })
 export class MaterialModule {}
