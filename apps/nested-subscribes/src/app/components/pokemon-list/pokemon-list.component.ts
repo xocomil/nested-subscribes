@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Pokemon } from '../../models/models';
 
 @Component({
   selector: 'nested-pokemon-list',
