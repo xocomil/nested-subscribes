@@ -1,3 +1,5 @@
+import { ResourceLocation } from './resource-location';
+
 export interface Pokemon {
   id: number;
   name: string;
@@ -7,12 +9,12 @@ export interface Pokemon {
   order: number;
   weight: number;
   abilities: Ability[];
-  forms: Form[];
+  forms: ResourceLocation[];
   game_indices: GameIndex[];
   held_items: HeldItem[];
   location_area_encounters: string;
   moves: Move[];
-  species: Species;
+  species: ResourceLocation;
   sprites: any;
   stats: Stat[];
   types: Type[];
@@ -27,78 +29,39 @@ export interface Ability {
   };
 }
 
-export interface Form {
-  name: string;
-  url: string;
-}
-
-export interface Version {
-  name: string;
-  url: string;
-}
-
 export interface GameIndex {
   game_index: number;
-  version: Version;
-}
-
-export interface Item {
-  name: string;
-  url: string;
+  version: ResourceLocation;
 }
 
 export interface VersionDetail {
   rarity: number;
-  version: Version;
+  version: ResourceLocation;
 }
 
 export interface HeldItem {
-  item: Item;
+  item: ResourceLocation;
   version_details: VersionDetail[];
-}
-
-export interface VersionGroup {
-  name: string;
-  url: string;
-}
-
-export interface MoveLearnMethod {
-  name: string;
-  url: string;
 }
 
 export interface VersionGroupDetail {
   level_learned_at: number;
-  version_group: VersionGroup;
-  move_learn_method: MoveLearnMethod;
+  version_group: ResourceLocation;
+  move_learn_method: ResourceLocation;
 }
 
 export interface Move {
-  move: {
-    name: string;
-    url: string;
-  };
+  move: ResourceLocation;
   version_group_details: VersionGroupDetail[];
-}
-
-export interface Species {
-  name: string;
-  url: string;
 }
 
 export interface Stat {
   base_stat: number;
   effort: number;
-  stat: {
-    name: string;
-    url: string;
-  };
+  stat: ResourceLocation;
 }
 
 export interface Type {
   slot: number;
-  type: {
-    name: string;
-    url: string;
-  };
+  type: ResourceLocation;
 }
