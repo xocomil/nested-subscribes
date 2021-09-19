@@ -12,5 +12,5 @@
 .child {
   min-width: calc(50% - 5px);
   flex-grow: 1;
-  height: 33%;
+  min-height: 33%;
 }
