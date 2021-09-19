@@ -21,7 +21,7 @@
               "apps/nested-subscribes/src/favicon.ico",
               "apps/nested-subscribes/src/assets"
             ],
-            "styles": ["apps/nested-subscribes/src/styles.scss"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/nested-subscribes/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -123,6 +123,7 @@
     }
   },
   "cli": {
+    "analytics": "9061f36d-32ac-4a9c-983f-9c7cbc96cbe5",
     "defaultCollection": "@nrwl/angular",
     "packageManager": "npm"
   },
