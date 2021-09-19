@@ -10,6 +10,7 @@ import { PokemonService } from '../../services/pokemon.service';
 export class NestedSubscribeComponent {
   pokemon: Pokemon[] = [];
   isLoading = false;
+  timeOutMs = 700;
 
   constructor(private readonly _pokemonService: PokemonService) {}
 
@@ -36,6 +37,6 @@ export class NestedSubscribeComponent {
     setTimeout(() => {
       this.pokemon = resultPokemon;
       this.isLoading = false;
-    }, 5000);
+    }, this.timeOutMs);
   }
 }

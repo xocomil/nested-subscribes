@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MergedObservablesComponent } from './merged-observables.component';
+import { SwitchMapObservablesComponent } from './switch-map-observables.component';
 
 describe('MergedObservablesComponent', () => {
-  let component: MergedObservablesComponent;
-  let fixture: ComponentFixture<MergedObservablesComponent>;
+  let component: SwitchMapObservablesComponent;
+  let fixture: ComponentFixture<SwitchMapObservablesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MergedObservablesComponent ]
-    })
-    .compileComponents();
+      declarations: [SwitchMapObservablesComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MergedObservablesComponent);
+    fixture = TestBed.createComponent(SwitchMapObservablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

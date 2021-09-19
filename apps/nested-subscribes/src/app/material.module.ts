@@ -10,6 +10,7 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 
@@ -27,9 +28,10 @@ import { MatTableModule } from '@angular/material/table';
     CdkTreeModule,
     DragDropModule,
     // Material
-    MatTableModule,
     MatButtonModule,
+    MatInputModule,
     MatProgressSpinnerModule,
+    MatTableModule,
   ],
 })
 export class MaterialModule {}
