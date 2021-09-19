@@ -13,7 +13,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "nestedSubscribes",
+            "prefix": "nested",
             "style": "camelCase"
           }
         ],
@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "nested-subscribes",
+            "prefix": "nested",
             "style": "kebab-case"
           }
         ]

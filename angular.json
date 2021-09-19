@@ -5,7 +5,7 @@
       "projectType": "application",
       "root": "apps/nested-subscribes",
       "sourceRoot": "apps/nested-subscribes/src",
-      "prefix": "nested-subscribes",
+      "prefix": "nested",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
