@@ -1,7 +1,10 @@
 <div class="container mat-elevation-z4">
   <h3 class="grow">Nested Subscribe Example</h3>
-  <button mat-stroked-button color="primary">GO!</button>
+  <button mat-stroked-button color="primary" (click)="getData()">
+    <span *ngIf="!isLoading">GO!</span>
+    <mat-spinner diameter="25" strokeWidth="2" *ngIf="isLoading"></mat-spinner>
+  </button>
   <div class=content>
-    <nested-pokemon-list></nested-pokemon-list>
+    <nested-pokemon-list [pokemon]="pokemon"></nested-pokemon-list>
   </div>
 </div>
