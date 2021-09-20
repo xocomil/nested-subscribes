@@ -7,7 +7,7 @@
   overflow: auto;
   grid-gap: 10px;
 
-  >div {
+  >div:not(:last-child) {
     margin: 6px;
 
     >.width-100 {
