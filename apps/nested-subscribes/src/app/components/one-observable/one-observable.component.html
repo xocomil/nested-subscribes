@@ -1,1 +1,14 @@
-<p>one-observable works!</p>
+<div class="container mat-elevation-z4">
+  <h3 class="grow">Using One Observable Example</h3>
+  <button mat-stroked-button color="primary" (click)="useSwitchMap()">
+    <span *ngIf="!isLoading">switchMap()</span>
+    <mat-spinner diameter="25" strokeWidth="2" *ngIf="isLoading"></mat-spinner>
+  </button>
+  <button mat-stroked-button color="accent" (click)="useConcatMap()">
+    <span *ngIf="!isLoading">concatMap()</span>
+    <mat-spinner diameter="25" strokeWidth="2" *ngIf="isLoading"></mat-spinner>
+  </button>
+  <div class=content>
+    <nested-pokemon-list [pokemon]="pokemon"></nested-pokemon-list>
+  </div>
+</div>
