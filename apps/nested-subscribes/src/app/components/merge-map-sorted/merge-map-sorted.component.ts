@@ -35,6 +35,7 @@ export class MergeMapSortedComponent {
     pokemon$
       .pipe(
         toArray(),
+        map((pokemon) => pokemon.sort((a, b) => a.id - b.id)),
         finalize(() => {
           this.isLoading = false;
         })
