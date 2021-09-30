@@ -9,6 +9,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { SwitchMapObservablesComponent } from './components/switch-map-observables/switch-map-observables.component';
 import { MaterialModule } from './material.module';
 import { OneObservableComponent } from './components/one-observable/one-observable.component';
+import { MergeMapSortedComponent } from './components/merge-map-sorted/merge-map-sorted.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { OneObservableComponent } from './components/one-observable/one-observab
     NestedSubscribeComponent,
     SwitchMapObservablesComponent,
     OneObservableComponent,
+    MergeMapSortedComponent,
   ],
   imports: [
     BrowserModule,
