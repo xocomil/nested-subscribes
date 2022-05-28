@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { createComponentFactory } from '@ngneat/spectator/jest';
+import { MockComponent } from 'ng-mocks';
+import { PokemonService } from '../../services/pokemon.service';
+import { PokemonListComponent } from '../pokemon-list/pokemon-list.component';
 import { MergeMapSortedComponent } from './merge-map-sorted.component';
 
+const createComponent = createComponentFactory({
+  component: MergeMapSortedComponent,
+  declarations: [MockComponent(PokemonListComponent)],
+  mocks: [PokemonService],
+});
+
 describe('MergeMapSortedComponent', () => {
-  let component: MergeMapSortedComponent;
-  let fixture: ComponentFixture<MergeMapSortedComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ MergeMapSortedComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(MergeMapSortedComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const spectator = createComponent();
+
+    expect(spectator).toBeTruthy();
   });
 });
