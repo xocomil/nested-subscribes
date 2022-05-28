@@ -1,25 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { createComponentFactory } from '@ngneat/spectator/jest';
+import { MockModule } from 'ng-mocks';
+import { MaterialModule } from '../../material.module';
 import { PokemonListComponent } from './pokemon-list.component';
 
+const createComponent = createComponentFactory({
+  component: PokemonListComponent,
+  imports: [MockModule(MaterialModule)],
+});
+
 describe('PokemonListComponent', () => {
-  let component: PokemonListComponent;
-  let fixture: ComponentFixture<PokemonListComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PokemonListComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PokemonListComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const spectator = createComponent();
+
+    expect(spectator).toBeTruthy();
   });
 });
