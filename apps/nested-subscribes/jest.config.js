@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   coverageDirectory: '../../coverage/apps/nested-subscribes',
+  coverageReporters: ['clover', 'html', 'lcov'],
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },
