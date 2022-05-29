@@ -1,25 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { createComponentFactory } from '@ngneat/spectator/jest';
+import { MockComponent } from 'ng-mocks';
+import { PokemonService } from '../../services/pokemon.service';
+import { PokemonListComponent } from '../pokemon-list/pokemon-list.component';
 import { OneObservableComponent } from './one-observable.component';
 
+const createComponent = createComponentFactory({
+  component: OneObservableComponent,
+  declarations: [MockComponent(PokemonListComponent)],
+  mocks: [PokemonService],
+});
+
 describe('OneObservableComponent', () => {
-  let component: OneObservableComponent;
-  let fixture: ComponentFixture<OneObservableComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ OneObservableComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(OneObservableComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const spectator = createComponent();
+
+    expect(spectator).toBeTruthy();
   });
 });
