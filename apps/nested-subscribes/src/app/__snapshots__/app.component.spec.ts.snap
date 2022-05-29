@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should create the app 1`] = `
+<nested-subscribes-root
+  __ngContext__={[Function LRootView]}
+  title={[Function String]}
+>
+  <div
+    class="container"
+  >
+    <div
+      class="child"
+    >
+      <nested-nested-subscribe />
+    </div>
+    <div
+      class="child"
+    >
+      <nested-switch-map-observables />
+    </div>
+    <div
+      class="child"
+    >
+      <nested-one-observable />
+    </div>
+    <div
+      class="child"
+    >
+      <nested-merge-map-sorted />
+    </div>
+  </div>
+</nested-subscribes-root>
+`;
