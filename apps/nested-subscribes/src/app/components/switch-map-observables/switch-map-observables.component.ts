@@ -26,9 +26,7 @@ export class SwitchMapObservablesComponent {
       .getPokemon()
       .pipe(
         switchMap((response) => {
-          const requests = response.results.map((result) =>
-            this._pokemonService.getPokemonDetails(result.name)
-          );
+          const requests = response.results.map((result) => this._pokemonService.getPokemonDetails(result.name));
 
           return concat(requests).pipe(
             zipAll(),
