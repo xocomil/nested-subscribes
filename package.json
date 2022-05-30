@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "13.3.10",
     "@angular/router": "13.3.10",
     "@nrwl/angular": "14.1.9",
-    "rxjs": "~6.6.0",
+    "rxjs": "7.5.5",
     "tslib": "^2.0.0",
     "zone.js": "0.11.5"
   },
@@ -64,3 +64,4 @@
     "npm": "8.11.0"
   }
 }
+
