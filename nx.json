@@ -12,9 +12,11 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "NjNkMWI5NDAtNDA4Mi00MGYyLWEyZGMtMDY2NmExYWQ5YTlkfHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
   },
@@ -26,13 +28,36 @@
       }
     ]
   },
-  "projects": {
-    "nested-subscribes": {
-      "tags": []
+  "cli": {
+    "analytics": "9061f36d-32ac-4a9c-983f-9c7cbc96cbe5",
+    "defaultCollection": "@nrwl/angular",
+    "packageManager": "npm"
+  },
+  "defaultProject": "nested-subscribes",
+  "generators": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
     },
-    "nested-subscribes-e2e": {
-      "tags": [],
-      "implicitDependencies": ["nested-subscribes"]
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }
